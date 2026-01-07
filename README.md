@@ -1,4 +1,21 @@
-Análise de vendas com Python e Pandas.
+# Projeto: Análise de Vendas
 
-Este projeto de realiza uma análise simples e prática de vendas, utilizando Python,Pandas e Matplotlib. 
-o objetivo é entender melhor os dados, gerar estatísticas e visualizar os produtos com maior faturamento.
+Este projeto realiza uma análise simples de dados de vendas usando Python.
+
+## O que o projeto faz
+- Lê um arquivo CSV com dados de vendas
+- Calcula o total vendido
+- Agrupa vendas por produto
+- Exibe um gráfico de vendas por produto
+
+## Tecnologias utilizadas
+- Python
+- pandas
+- matplotlib
+
+## Estrutura do projeto
+- data/vendas.csv → dados
+- analyse_vendas.py → código
+
+## Observação
+Projeto educacional desenvolvido para aprendizado em análise de dados.
