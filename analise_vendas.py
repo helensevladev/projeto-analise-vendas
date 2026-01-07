@@ -1,23 +1,26 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# 1. Ler os dados
 df = pd.read_csv("data/vendas.csv")
 
-print("\n=== RESUMO DAS VENDAS ===")
+# 2. Mostrar resumo das vendas
+print("Resumo das vendas:")
 print(df.describe())
 
-total = df["valor_total"].sum()
-print(f"\nTotal vendido: R$ {total:.2f}")
+# 3. Calcular o total vendido
+total_vendido = df["valor_total"].sum()
+print(f"\nTotal vendido: R$ {total_vendido:.2f}")
 
-vendas_produto = df.groupby("produto")
-["valor_total"].sum()
+# 4. Agrupar vendas por produto
+vendas_por_produto = df.groupby("produto")["valor_total"].sum()
 print("\nVendas por produto:")
-print(vendas_produto)
+print(vendas_por_produto)
 
-vendas_produto.plot(kind="bar")
-plt.title("vendas por produto")
-plt.ylabel("Total Vendido")
+# 5. Criar gráfico
+vendas_por_produto.plot(kind="bar")
+plt.title("Vendas por Produto")
 plt.xlabel("Produto")
+plt.ylabel("Total Vendido (R$)")
 plt.tight_layout()
-plt.savefig("grafico_vendas.png")
 plt.show()
